@@ -5,21 +5,40 @@
 
     <group android:checkableBehavior="single">
         <item
-                android:id="@+id/nav_home"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="@string/menu_home"/>
+                android:id="@+id/nav_Recharge"
+                android:icon="@drawable/ic_recharge"
+                android:title="@string/Recharge"/>
         <item
-                android:id="@+id/nav_gallery"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="@string/menu_gallery"/>
+                android:id="@+id/nav_contactUs"
+                android:icon="@drawable/ic_contactus"
+                android:title="@string/ContactUs"/>
         <item
-                android:id="@+id/nav_slideshow"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/menu_slideshow"/>
+                android:id="@+id/nav_rateUs"
+                android:icon="@drawable/ic_feedback"
+                android:title="@string/RateUs"/>
         <item
-                android:id="@+id/nav_tools"
+                android:id="@+id/nav_DeskDelivery"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="@string/menu_tools"/>
+                android:title="@string/DeskDelivery">
+            <menu>
+                <item
+                        android:id="@+id/nav_MyProfile"
+                        android:icon="@drawable/ic_profile"
+                        android:title="@string/deskDelivery_myProfile"/>
+                <item
+                        android:id="@+id/nav_Requests"
+                        android:icon="@drawable/ic_request"
+                        android:title="@string/deskDelivery_requests"/>
+                <item
+                        android:id="@+id/nav_Volunteer"
+                        android:icon="@drawable/ic_volunteer"
+                        android:title="@string/deskDelivery_volunteer"/>
+                <item
+                        android:id="@+id/nav_MyMatch"
+                        android:icon="@drawable/ic_my_match"
+                        android:title="@string/deskDelivery_myMatch"/>
+            </menu>
+        </item>
     </group>
 
 </menu>

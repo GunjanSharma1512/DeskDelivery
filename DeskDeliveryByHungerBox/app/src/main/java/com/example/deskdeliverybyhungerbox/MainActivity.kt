@@ -1,5 +1,6 @@
 package com.example.deskdeliverybyhungerbox
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -11,6 +12,7 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.widget.ImageButton
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,6 +37,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         navView.setNavigationItemSelectedListener(this)
+
+        val imageButton = findViewById<ImageButton>(R.id.imageButton10)
+        imageButton?.setOnClickListener{
+            val intent = Intent(this@MainActivity, SecondActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onBackPressed() {
@@ -65,22 +73,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_home -> {
-                // Handle the camera action
-            }
-            R.id.nav_gallery -> {
+
+            R.id.nav_Recharge -> {
 
             }
-            R.id.nav_slideshow -> {
+            R.id.nav_contactUs-> {
 
             }
-            R.id.nav_tools -> {
+            R.id.nav_rateUs -> {
 
             }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
+            R.id.nav_DeskDelivery -> {
 
             }
         }

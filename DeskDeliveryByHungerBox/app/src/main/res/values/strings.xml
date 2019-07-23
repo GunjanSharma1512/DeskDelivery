@@ -13,4 +13,13 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+	<string name="Order">Order</string>
+    <string name="DeskDelivery">Desk Delivery</string>
+    <string name="Recharge">Recharge</string>
+    <string name="deskDelivery_requests">Delivery Requests</string>
+    <string name="deskDelivery_volunteer">Delivery Volunteers</string>
+    <string name="deskDelivery_myMatch">My Matches</string>
+    <string name="deskDelivery_myProfile">My Profile</string>
+    <string name="RateUs">Rate Us</string>
+    <string name="ContactUs">Contact us</string>
 </resources>
