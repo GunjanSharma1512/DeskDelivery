@@ -22,4 +22,13 @@
     <string name="deskDelivery_myProfile">My Profile</string>
     <string name="RateUs">Rate Us</string>
     <string name="ContactUs">Contact us</string>
+    <string-array name="food_items">
+        <item>Paneer Makhani</item>
+        <item>Dal Tadka</item>
+        <item>Jeera Rice</item>
+        <item>Tandoori Roti</item>
+        <item>Naan</item>
+        <item>Makhani Saag</item>
+        <item>Toor Dal</item>
+    </string-array>
 </resources>

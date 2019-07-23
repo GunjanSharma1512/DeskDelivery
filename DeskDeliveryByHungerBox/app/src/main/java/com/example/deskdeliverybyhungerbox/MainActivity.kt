@@ -12,14 +12,30 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.view.View
+import android.widget.GridView
 import android.widget.ImageButton
+import android.widget.AdapterView
+
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    private var foodType1:FoodType = FoodType("South Indian",R.mipmap.ic_launcher_foreground_southindian)
+    private var foodType2:FoodType = FoodType("North Indian",R.mipmap.ic_launcher_foreground_northindian)
+    private var foodType3:FoodType = FoodType("Chinese",R.mipmap.ic_launcher_foreground_chinesefood)
+    private var foodType4:FoodType = FoodType("Juice",R.mipmap.ic_launcher_foreground_juice)
+    private var foodTypes:Array<FoodType> = arrayOf(foodType1,foodType2,foodType3,foodType4)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val simpleGrid = findViewById<GridView>(R.id.grid_view)
+        // Create an object of CustomAdapter and set Adapter to GridView
+        val customAdapter = CustomAdapter(applicationContext, foodTypes)
+
+        simpleGrid.adapter  = customAdapter
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -38,11 +54,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         navView.setNavigationItemSelectedListener(this)
 
-        val imageButton = findViewById<ImageButton>(R.id.imageButton10)
-        imageButton?.setOnClickListener{
+        simpleGrid.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            // set an Intent to Another Activity
             val intent = Intent(this@MainActivity, SecondActivity::class.java)
-            startActivity(intent)
+            startActivity(intent) // start Intent
         }
+
     }
 
     override fun onBackPressed() {

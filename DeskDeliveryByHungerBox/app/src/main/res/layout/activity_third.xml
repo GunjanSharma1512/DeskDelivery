@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="#FFCDD2"
+			  android:orientation="vertical"
+			  android:padding="16dp"
+android:scrollbarAlwaysDrawVerticalTrack="true">
+
+	<TextView
+			android:id="@+id/contact_form_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginBottom="16dp"
+			android:layout_marginTop="5dp"
+			android:text="Request Desk Delivery"
+			android:textColor="#ce3232"
+			android:textSize="30sp"
+			android:typeface="serif" />
+
+	<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:backgroundTint="@color/colorPrimaryDark"
+			android:text="Paneer Makhani"
+			android:textColor="#000000"
+			android:textSize="20sp"
+			android:padding="15dp"/>
+
+	<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:backgroundTint="@color/colorPrimaryDark"
+			android:text="North Indian"
+			android:textColor="#000000"
+			android:textSize="20sp"
+			android:padding="15dp"/>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimaryDark"
+		android:text="Desired time of delivery"
+		android:textColor="#000000"
+		android:textSize="15sp"
+		android:padding="15dp"/>
+
+	<TimePicker
+			android:id="@+id/timePicker1"
+			android:layout_above="@+id/set_button"
+			android:layout_centerHorizontal="true"
+			android:layout_marginBottom="24dp" android:layout_height="370dp" android:layout_width="343dp"/>
+
+	<EditText
+			android:layout_width="fill_parent"
+			android:layout_marginBottom="10dp"
+			android:layout_marginTop="10dp"
+			android:backgroundTint="@color/colorPrimaryDark"
+			android:gravity="top"
+			android:hint="Cubicle number (eg 3B201)"
+			android:fitsSystemWindows="true"
+			android:breakStrategy="balanced"
+			android:inputType="textMultiLine"
+			android:singleLine="false"
+			android:padding="5dp"
+	android:layout_height="40dp"/>
+
+	<EditText
+			android:layout_width="fill_parent"
+			android:layout_marginBottom="10dp"
+			android:layout_marginTop="10dp"
+			android:backgroundTint="@color/colorPrimaryDark"
+			android:gravity="top"
+			android:hint="Special instructions"
+			android:fitsSystemWindows="true"
+			android:breakStrategy="balanced"
+			android:inputType="textMultiLine"
+			android:singleLine="false"
+			android:padding="5dp"
+			android:layout_height="40dp"/>
+
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:background="@color/colorPrimaryDark"
+			android:elevation="4dp"
+			android:paddingLeft="70dp"
+			android:paddingRight="70dp"
+			android:text="Submit"
+			android:textColor="#fff"
+	android:id="@+id/submit_button"/>
+</LinearLayout>
+</ScrollView>
